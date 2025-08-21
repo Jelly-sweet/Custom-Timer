@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+#timer {
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
