@@ -2,6 +2,7 @@
 const closeSound = document.getElementById("close-btn-sound"); // 閉じるボタンの効果音
 const appSound   = document.getElementById("app-hover-sound"); // アプリクリックの効果音
 const HomeBgm    = document.getElementById("home-bgm");        // ホームBGM
+const iconLinks  = document.querySelectorAll(".icon a")
 
 // --- ボタン ---
 const muteBtn    = document.getElementById("mute-btn");        // ミュートボタン
@@ -14,6 +15,14 @@ window.addEventListener("load", () => {
   HomeBgm.volume = 0.2; //音量０～１
   HomeBgm.play();
   HomeBgm.loop = true;
+
+    // 自動再生を試みる
+  HomeBgm.play().catch(() => {
+    // 自動再生できなかった場合はクリックで再生
+    window.addEventListener("click", () => {
+      HomeBgm.play();
+    }, { once: true });
+  });
 });
 
 
@@ -28,4 +37,20 @@ muteBtn.addEventListener("click", () => {
     iconSound.style.display = "inline";
     iconMute.style.display = "none";
   }
+});
+
+
+// sound
+// 閉じるボタンにマウスオーバーで音
+closeBtn.addEventListener('mouseenter', () => {
+  closeSound.currentTime = 0;
+  closeSound.play();
+});
+
+// アプリアイコンにマウスオーバーで音
+iconLinks.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    appSound.currentTime = 0;
+    appSound.play();
+  });
 });
