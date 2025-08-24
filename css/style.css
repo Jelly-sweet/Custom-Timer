@@ -1,17 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+/* color */
+  --white-color:#fff;
+  --dark-color:#000;
+  --gray-color:#3F3C5B;
+  --blue-color:#008CFF;
+  --light-blue-color:#DFF1FF;
+  --green-color:#007C4A;
+  --light-green-color:#8DD883;
+  --red-color:#C30000;
+  --light-red-color:#FA8E8E;
+  --orange-color:#DE8100;
+  --light-orange-color:#F3C298;
+
+  /* border */
+  --border-radius-s:7px;
+  --border-radius-m:50px;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Libertinus Serif', serif;
+  background-color: #e0f7fa; /* ホーム画面用背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  position: relative;
+}
+
+p{
+  font-family: "ROBOTO", cursive;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+/* close-btn */
+.close-btn {
+  position: absolute;
+  background: none;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  opacity: 0.8;
+}
+
+.close-btn img {
+  display: block; /* 余白を消す */
+  background: none; /* 透明を確実に */
+  width: 35px;
+  height: 30px;
+}
+
+/* sound btn */
+#mute-btn {
+ position: absolute;
+  top: 50px;
+  right: 18px; /* close-btnの左隣 */
+  z-index: 10;
+  transition: opacity 0.1s ease
+}
+
+.fa-solid:hover {
+  opacity: 0.8;
+}
+
+.app {
+  position: relative; /* これで中の絶対配置がapp基準になる */
+  max-width: 550px;
+  height: 450px;
+  width: 100%;
   text-align: center;
-  padding: 50px;
+  background-image: url(/img/background.jpg);
+  background-position: -120px 10px;
+  background-size: 700px 550px;
+  border: 5px solid var(--white-color);
 }
 
-#timer {
-  font-size: 3em;
-  margin: 20px 0;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 35px;
+  margin:20px 30px 0 70px;
 }
 
-button {
-  font-size: 1em;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
+.icon {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-m);
+  border: 5px solid var(--white-color);
+  margin-top: 10px;
+}
+
+.icon-img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;/*マウスを乗せたときにカーソルの形を変えるプロパティ*/
+}
+
+.icon img:hover {
+  animation: tilt 0.8s ease-in-out;
+}
+
+@keyframes tilt {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(5deg); }
+  40%  { transform: rotate(-5deg); }
+  60%  { transform: rotate(5deg); }
+  80%  { transform: rotate(-5deg);}
+  100% { transform: rotate(0deg); }
+}
+
+.icon .app-title {
+  color: var(--dark-color);
+  background-color: var(--white-color);
+  text-align: center;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 15px;
+  border-radius: var(--border-radius-s);
+  font-weight: bold;
+}
+
+
+
+.timer-20-20-20 {
+  border: 3px solid var(--blue-color);
+}
+.pomodoro {
+  border: 3px solid var(--orange-color);
+
+}
+.stretching-timer {
+  border: 3px solid var(--green-color);
+}
+.reading-timer {
+  border: 3px solid var(--red-color);
 }

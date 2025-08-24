@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Timer App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="close-btn-sound" src="/sounds/決定ボタンを押す35.mp3"></audio>
+  <audio id="app-hover-sound" src="/sounds/決定ボタンを押す42.mp3"></audio>
+  <audio id="home-bgm" src="/sounds/butterflies-amp-flowers-222527.mp3" loop></audio>
+
+  <div class="app">
+    <button class="close-btn">
+      <img  src="/img/close-btn.png" alt="close" class="btn-img">
+    </button>
+
+    <button id="mute-btn" style="background:none; border:none; cursor:pointer; font-size:24px;">
+      <i id="icon-sound" class="fa-solid fa-volume-low" style="color:#ffffff;"></i>
+      <i id="icon-mute" class="fa-solid fa-volume-xmark" style="color:#ffffff; display:none;"></i>
+    </button>
+
+    <div class="icon-grid">
+      <div class="icon">
+        <a href="timer-20-20-20.html">
+          <img class="icon-img" src="/img/20-20-20_Timer.png" alt="20-20-20 Timer" >
+        </a>
+        <p class="app-title timer-20-20-20">20-20-20 Timer</p>
+      </div>
+      <div class="icon">
+        <a href="timer-pomodoro.html">
+          <img class="icon-img" src="/img/Pomodoro_Timer.png" alt="Pomodoro Timer">
+        </a>
+        <p class="app-title pomodoro">Pomodoro Timer</p>
+      </div>
+      <div class="icon">
+        <a href="timer-stretching.html">
+          <img class="icon-img" src="/img/Stretch_timer.png" alt="Stretching Timer">
+        </a>
+        <p class="app-title stretching-timer">Stretching Timer</p>
+      </div>
+      <div class="icon">
+        <a href="timer-reading.html">
+          <img class="icon-img" src="/img/Reading_timer.png" alt="Reading Timer">
+        </a>
+        <p class="app-title reading-timer">Reading Timer</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/script.js"></script>
+</html>
