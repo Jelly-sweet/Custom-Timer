@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro timer</title>
+  <link rel="stylesheet" href="/custom-timer/css/pomodoro-app.css">
+</head>
+<body>
+  <div class="timer-app">
+    <a href="/custom-timer/index.html" class="close-btn">
+      <img src="/custom-timer/img/close-btn.png" alt="close" class="btn-img">
+    </a>
+
+    <img src="/custom-timer/img/pomodoro1.png" alt="" class="pomodoro-img">
+
+    <!-- タイマー表示 -->
+    <div class="timer-display-wrapper">
+      <img src="/custom-timer/img/donut.png" alt="donut" class="donut-marker">
+      <p class="text">Focus</p>
+    </div>
+
+    <div class="timer-display">
+      <span id="minutes">25</span>:<span id="seconds">00</span>
+    </div>
+
+    <!-- コントロールボタン -->
+    <div class="controls">
+      <button id="start-btn" class="start-btn">Start</button>
+      <button id="pause-btn" class="pause-btn">Pause</button>
+      <button id="reset-btn" class="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <script src="/custom-timer/js/app-pomodoro.js"></script>
+</body>
+</html>

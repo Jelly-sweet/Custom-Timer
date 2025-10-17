@@ -59,17 +59,17 @@ p{
 }
 
 .close-btn img {
-  display: block; /* 余白を消す */
-  background: none; /* 透明を確実に */
+  display: block;
+  background: none;
   width: 35px;
   height: 30px;
 }
 
-/* sound btn */
+
 #mute-btn {
  position: absolute;
   top: 50px;
-  right: 18px; /* close-btnの左隣 */
+  right: 18px; 
   z-index: 10;
   transition: opacity 0.1s ease
 }
@@ -79,12 +79,12 @@ p{
 }
 
 .app {
-  position: relative; /* これで中の絶対配置がapp基準になる */
+  position: relative; 
   max-width: 550px;
   height: 450px;
   width: 100%;
   text-align: center;
-  background-image: url(/img/background.jpg);
+  background-image: url(/custom-timer/img/background.jpg);
   background-position: -120px 10px;
   background-size: 700px 550px;
   border: 5px solid var(--white-color);
@@ -110,7 +110,7 @@ p{
 .icon-img {
   width: 150px;
   height: 150px;
-  cursor: pointer;/*マウスを乗せたときにカーソルの形を変えるプロパティ*/
+  cursor: pointer;
 }
 
 .icon img:hover {

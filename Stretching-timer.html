@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Reading Timer</title>
+  <link rel="stylesheet" href="/custom-timer/css/Stretching-app.css">
+</head>
+<body>
+  <div class="timer-app">
+    <a href="/custom-timer/index.html" class="close-btn">
+      <img  src="/custom-timer//img/close-btn.png" alt="close" class="btn-img">
+    </a>
+
+    <!-- タイマー表示 -->
+    <div class="timer-display-wrapper">
+        <img src="/custom-timer/img/Stretch1.png" alt="Reading..." class="img">
+        <p class="text">Stretching...</p>
+    </div>
+    <div class="timer-display">
+      <span id="minutes">15</span>:<span id="seconds">00</span>
+    </div>
+
+    <!-- コントロールボタン -->
+    <div class="controls">
+      <button id="start-btn" class="start-btn">Start</button>
+      <button id="pause-btn" class="pause-btn">Pause</button>
+      <button id="reset-btn" class="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <script src="/custom-timer/js/app-Stretch.js"></script>
+</body>
+</html>

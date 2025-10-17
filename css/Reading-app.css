@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+/* color */
+  --white-color:#fff;
+  --dark-color:#000;
+  --gray-color:#3F3C5B;
+  --blue-color:#008CFF;
+  --middle-blue-color:#517DA1;
+  --light-blue-color:#DFF1FF;
+  --green-color:#007C4A;
+  --light-green-color:#8DD883;
+  --red-color:#C30000;
+  --light-red-color:#FA8E8E;
+  --orange-color:#DE8100;
+  --light-orange-color:#F3C298;
+
+  /* border */
+  --border-radius-s:7px;
+  --border-radius-m:50px;
+}
+
+/* close-btn */
+.close-btn {
+  position: absolute;
+  background: none;
+  top: 7px;
+  right: 10px;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  opacity: 0.8;
+}
+
+.close-btn img {
+  display: block;
+  background: none; 
+  width: 35px;
+  height: 27px;
+}
+
+/***** 
+
+20-20-20 timer app styling 
+
+*****/
+
+body {
+  font-family: 'Libertinus Serif', serif;
+  background-color: #282c34;
+  color: var(--dark-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.timer-app {
+  position: relative; 
+  max-width: 300px;
+  height: 450px;
+  width: 100%;
+  text-align: center;
+  background-image: url(/custom-timer/img/background.jpg);
+  background-position: -450px -25px;
+  background-size: 850px 550px;
+  border: 8px solid var(--blue-color);
+}
+
+.timer-app .timer-display-wrapper {
+  position: relative; 
+  display: inline-block; 
+  margin-top: 40px;
+}
+
+
+.timer-app .text {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  font-family: 'Titan One', cursive;
+  font-size: 30px;
+  -webkit-text-stroke: 1.5px black; 
+  color: var(--red-color);
+}
+
+.timer-app .text.break {
+  color: var(--red-color); 
+}
+
+.timer-app .timer-display-wrapper .img{
+  display: block;
+  width: 230px;
+  height: 230px;
+  border: 5px solid var(--gray-color);
+}
+.set-selection {
+  margin-bottom: 20px;
+}
+
+.timer-display {
+  font-size: 45px;
+  background-color: var(--light-blue-color);
+  margin: 10px 60px;
+  border: 5px solid var(--white-color);
+  padding: 10px 0;
+}
+
+.controls button {
+  padding: 5px 10px;
+  margin: 10px 5px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: var(--border-radius-m);
+  border: 3px solid var(--white-color);
+}
+
+button,
+span {
+  font-family: 'Titan One', cursive;
+}
+
+.start-btn {
+  background-color: var(--light-green-color);
+}
+.pause-btn {
+  background-color: var(--light-orange-color);
+}
+.reset-btn {
+  background-color: var(--light-red-color);
+}
