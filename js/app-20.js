@@ -38,7 +38,7 @@ function startTimer() {
 
 // finish sound function
 function playFinishBeep(){
-  const audio = new Audio('.../sounds/目覚まし時計のアラーム.mp3');
+  const audio = new Audio('/custom-timer/目覚まし時計のアラーム.mp3');
   audio.play();
   audio.addEventListener("ended", () =>{
     startTimer();
@@ -47,7 +47,7 @@ function playFinishBeep(){
 
 // start sound function
 function playStartBeep() {
-  const audio = new Audio('.../sounds/カウントダウン電子音.mp3')
+  const audio = new Audio('/custom-timer/sounds/カウントダウン電子音.mp3')
   audio.play();
   audio.addEventListener("ended", () =>{
     startTimer();
@@ -69,7 +69,7 @@ function resetTimer() {
   imgTimer = null;
   isWorkTime = true;
   timeLeft = 20 * 60 * 60 / 60;
-  img.src = '.../img/20-20-20-work1.png';
+  img.src = '/custom-timer/img/20-20-20-work1.png';
   textEl.textContent = "Working...";
   updateDisplay();
 }
@@ -84,7 +84,7 @@ function switchMode() {
     textEl.classList.remove("working");
     textEl.classList.add("break");
     
-    const audio = new Audio('../sounds/目覚まし時計のアラーム.mp3');
+    const audio = new Audio('/custom-timer/sounds/目覚まし時計のアラーム.mp3');
     audio.play();
     audio.addEventListener("ended", () =>{
       startTimer();
@@ -97,7 +97,7 @@ function switchMode() {
     textEl.textContent = "Working...";
     textEl.classList.remove("break");
     textEl.classList.add("working");
-    const audio = new Audio('../sounds/カウントダウン電子音.mp3')
+    const audio = new Audio('/custom-timer/sounds/カウントダウン電子音.mp3')
     audio.play();
     audio.addEventListener("ended", () =>{
       startTimer();
@@ -110,15 +110,15 @@ function switchMode() {
 
 // 作業用の画像リスト
 const workImages = [
-  '../img/20-20-20-work1.png',
-  '../img/20-20-20-work2.png',
-  '../img/20-20-20-work3.png'
+  '/custom-timer/img/20-20-20-work1.png',
+  '/custom-timer/img/20-20-20-work2.png',
+  '/custom-timer/img/20-20-20-work3.png'
 ];
 
 // 休憩用の画像リスト
 const breakImages = [
-  '../img/20-20-20-rest1.png',
-  '../img/20-20-20-rest2.png'
+  '/custom-timer/img/20-20-20-rest1.png',
+  '/custom-timer/img/20-20-20-rest2.png'
 ];
 
 let imgIndex = 0;
@@ -162,7 +162,7 @@ updateDisplay();
 
 // ボタン効果音
 function playClickSound() {
-  const audio = new Audio('../sounds/決定ボタンを押す42.mp3');
+  const audio = new Audio('/custom-timer/sounds/決定ボタンを押す42.mp3');
   audio.currentTime = 0; // 連打しても頭から再生
   audio.play();
 }
