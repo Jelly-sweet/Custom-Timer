@@ -84,7 +84,7 @@ p{
   height: 450px;
   width: 100%;
   text-align: center;
-  background-image: url(/custom-timer/img/background.jpg);
+  background-image: url(./img/background.jpg);
   background-position: -120px 10px;
   background-size: 700px 550px;
   border: 5px solid var(--white-color);

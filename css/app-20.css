@@ -70,7 +70,7 @@ body {
   height: 450px;
   width: 100%;
   text-align: center;
-  background-image: url(/custom-timer/img/background.jpg);
+  background-image: url(./img/background.jpg);
   background-position: -450px -25px;
   background-size: 850px 550px;
   border: 8px solid var(--blue-color);
