@@ -56,34 +56,34 @@ function resetTimer() {
     imgTimer = null;
     isRunning = false;
     timeLeft = 15 * 60; // 15分
-    img.src = '../img/Stretch1.png';
+    img.src = './img/Stretch1.png';
     textEl.textContent = "Stretching...";
     updateDisplay();
 }
 
 // --- サウンド ---
 function playFinishBeep(){
-    const audio = new Audio('../sounds/目覚まし時計のアラーム.mp3');
+    const audio = new Audio('./sounds/目覚まし時計のアラーム.mp3');
     audio.play();
 }
 
 function playClickSound() {
-    const audio = new Audio('../sounds/決定ボタンを押す42.mp3');
+    const audio = new Audio('./sounds/決定ボタンを押す42.mp3');
     audio.currentTime = 0;
     audio.play();
 }
 
 // --- 画像関連 ---
 const workImages = [
-    '../img/Stretch1.png',
-    '../img/Stretch2.png',
-    '../img/Stretch3.png',
-    '../img/Stretch4.png'
+    './img/Stretch1.png',
+    './img/Stretch2.png',
+    './img/Stretch3.png',
+    './img/Stretch4.png'
 ];
 
 const finishImages = [
-    '../img/Stretch-finish1.png',
-    '../img/Stretch-finish2.png',
+    './img/Stretch-finish1.png',
+    './img/Stretch-finish2.png',
 ];
 
 let imgIndex = 0;

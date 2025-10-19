@@ -56,35 +56,35 @@ function resetTimer() {
     imgTimer = null;
     isRunning = false;
     timeLeft = 10 * 60; 
-    img.src = '../img/Reading1.png';
+    img.src = './img/Reading1.png';
     textEl.textContent = "Reading...";
     updateDisplay();
 }
 
 // --- サウンド ---
 function playFinishBeep(){
-    const audio = new Audio('../sounds/目覚まし時計のアラーム.mp3');
+    const audio = new Audio('./sounds/目覚まし時計のアラーム.mp3');
     audio.play();
 }
 
 function playClickSound() {
-    const audio = new Audio('../sounds/決定ボタンを押す42.mp3');
+    const audio = new Audio('./sounds/決定ボタンを押す42.mp3');
     audio.currentTime = 0;
     audio.play();
 }
 
 // --- 画像関連 ---
 const workImages = [
-    '../img/Reading1.png',
-    '../img/Reading2.png',
-    '../img/Reading3.png',
-    '../img/Reading4.png'
+    './img/Reading1.png',
+    './img/Reading2.png',
+    './img/Reading3.png',
+    './img/Reading4.png'
 ];
 
 const finishImages = [
-    '../img/Reading-finish1.png',
-    '../img/Reading-finish2.png',
-    '../img/Reading-finish3.png'
+    './img/Reading-finish1.png',
+    './img/Reading-finish2.png',
+    './img/Reading-finish3.png'
 ];
 
 let imgIndex = 0;
