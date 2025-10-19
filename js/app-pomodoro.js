@@ -50,8 +50,15 @@ function resetDonutPosition() {
 }
 
 // --- 画像ループ制御 ---
-const workImages = ['/custom-timer/img/pomodoro1.png','/custom-timer/img/pomodoro2.png'];
-const breakImages = ['/custom-timer/img/pomodoro-finish1.png','/custom-timer/img/pomodoro-finish2.png'];
+const workImages = [
+  './img/pomodoro1.png',
+  './img/pomodoro2.png'
+];
+
+const breakImages = [
+  './img/pomodoro-finish1.png',
+  './img/pomodoro-finish2.png'
+];
 
 let imgIndex = 0;
 let imgTimer = null;
@@ -134,7 +141,7 @@ function switchMode() {
     donut.style.display = "none";
     stopDonutRotation();
 
-    const audio = new Audio('/custom-timer/sounds/目覚まし時計のアラーム.mp3');
+    const audio = new Audio('./sounds/目覚まし時計のアラーム.mp3');
     audio.play();
     audio.addEventListener("ended", () =>{
       startTimer();
@@ -145,7 +152,7 @@ function switchMode() {
     timeLeft = 25 * 60;
     textEl.textContent = "Focus";
     donut.style.display = "block";
-    const audio = new Audio('/custom-timer/sounds/カウントダウン電子音.mp3')
+    const audio = new Audio('./sounds/カウントダウン電子音.mp3')
     audio.play();
     audio.addEventListener("ended", () =>{
       startTimer();
@@ -159,7 +166,7 @@ function switchMode() {
 
 // --- ボタン音 ---
 function playClickSound() {
-  const audio = new Audio('/custom-timer/sounds/決定ボタンを押す42.mp3');
+  const audio = new Audio('./sounds/決定ボタンを押す42.mp3');
   audio.currentTime = 0;
   audio.play();
 }
